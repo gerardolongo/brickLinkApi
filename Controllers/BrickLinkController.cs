@@ -1,5 +1,6 @@
 ﻿using System;
 using brickLinkApi.Service;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace brickLinkApi.Controllers
@@ -8,6 +9,7 @@ namespace brickLinkApi.Controllers
     [Route("[controller]")]
     public class BrickLinkController : ControllerBase
     {
+        [EnableCors("AllowOrigin")]
         [HttpGet("{numItem}")]
         public string Get(string numItem)
         {
