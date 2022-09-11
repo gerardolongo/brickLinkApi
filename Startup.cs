@@ -46,6 +46,8 @@ namespace brickLinkApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors();
         }
     }
 }
