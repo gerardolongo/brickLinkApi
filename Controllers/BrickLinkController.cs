@@ -10,7 +10,7 @@ namespace brickLinkApi.Controllers
     public class BrickLinkController : ControllerBase
     {
         //[EnableCors("AllowOrigin")]
-        [EnableCors(origins: "https://bricklinkapp.herokuapp.com", headers: "*", methods: "*")]
+        [EnableCors("https://bricklinkapp.herokuapp.com", headers: "*", methods: "*")]
         [HttpGet("{numItem}")]
         public string Get(string numItem)
         {
