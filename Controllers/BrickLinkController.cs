@@ -9,8 +9,7 @@ namespace brickLinkApi.Controllers
     [Route("[controller]")]
     public class BrickLinkController : ControllerBase
     {
-        //[EnableCors("AllowOrigin")]
-        [EnableCors("https://bricklinkapp.herokuapp.com")]
+        [EnableCors]
         [HttpGet("{numItem}")]
         public string Get(string numItem)
         {
